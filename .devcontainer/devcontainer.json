@@ -1,0 +1,35 @@
+{
+    "name": "Kubernetes Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/base:noble",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2.16.1": {},
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+            "version": "latest",
+            "helmVersion": "latest"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest",
+            "enableNonRootDocker": "true"
+        }
+    },
+    "containerEnv": {
+        "DOCKER_API_VERSION": "1.53" 
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-kubernetes-tools.vscode-kubernetes-tools",
+                "redhat.vscode-yaml",
+                "charliermarsh.ruff"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    },
+    // Installation des outils supplémentaires et création du cluster k3d
+    "postCreateCommand": "bash .devcontainer/install-tools.sh"
+}
