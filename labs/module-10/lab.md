@@ -47,11 +47,24 @@ Notez ce mot de passe, il sera utilisé pour se connecter à l'interface web.
 
 ### 1.5 Exposer l'interface web d'ArgoCD
 
+Si le devcontainer est sur votre PC :
+
 ```bash
 kubectl port-forward svc/argocd-server -n argocd 8081:443
 ```
 
 Ouvrez votre navigateur sur `https://localhost:8081` (acceptez le certificat auto-signé).
+
+Si le devcontainer est sur GitHub Codespaces:
+
+```bash
+kubectl port-forward svc/argocd-server -n argocd 8081:443 --address 0.0.0.0
+```
+
+Puis dans l'onglet Ports de Visual Studio Code (à côté des Terminals):
+- Passer le protocol à `HTTPS`
+- Passer la visibilité à `Public`
+- Cliquer sur la planète pour ouvrir l'interface ArgoCD
 
 Connectez-vous avec :
 - Utilisateur : `admin`
