@@ -5,19 +5,16 @@
         "ghcr.io/devcontainers/features/docker-in-docker:2.16.1": {},
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
             "version": "latest",
-            "helmVersion": "latest"
+            "helmVersion": "latest",
+            "enableNonRootDocker": "true"
         },
         "ghcr.io/devcontainers/features/node:1": {
             "version": "lts"
-        },
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {
-            "version": "latest",
-            "enableNonRootDocker": "true"
         }
     },
-    "containerEnv": {
-        "DOCKER_API_VERSION": "1.53" 
-    },
+    // "containerEnv": {
+    //     "DOCKER_API_VERSION": "1.53" 
+    // },
     "customizations": {
         "vscode": {
             "extensions": [

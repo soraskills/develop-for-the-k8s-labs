@@ -6,7 +6,7 @@ Formation progressive Kubernetes, du cluster à l'orchestration avancée avec Gi
 
 - [Visual Studio Code](https://code.visualstudio.com/) avec l'extension [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) installé et lancé
-- Ou un compte [GitHub](https://github.com/) pour utiliser GitHub Codespaces
+- Ou un compte [GitHub](https://github.com/) pour utiliser [GitHub Codespaces](https://github.com/codespaces)
 
 Aucune installation locale de Kubernetes n'est nécessaire : tout est fourni dans le Dev Container.
 
@@ -26,8 +26,9 @@ Aucune installation locale de Kubernetes n'est nécessaire : tout est fourni dan
 
 ### Option 2 — GitHub Codespaces
 
-1. Sur la page GitHub du dépôt, cliquer sur **Code** → **Codespaces** → **Create codespace on main**
-2. L'environnement se construit automatiquement avec tous les outils
+1. Ouvrir [GitHub Codespaces](https://github.com/codespaces)
+2. Chercher le repository `soraskills/develop-for-the-k8s-labs`
+2. Créer l'environnement avec 4 coeurs.
 3. Vous êtes prêts à travailler directement dans le navigateur
 
 ## Environnement fourni
