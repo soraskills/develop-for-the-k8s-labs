@@ -177,22 +177,22 @@ kubectl rollout undo deployment/my-deployment --to-revision=1
 ## Relations entre les objets
 
 ```
-┌─────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────┐
 │                  DEPLOYMENT                      │
 │  - Gère les rolling updates et rollbacks         │
 │  - Crée et supervise les ReplicaSets             │
 │                                                  │
 │  ┌─────────────────────────────────────────────┐ │
-│  │              REPLICASET                      │ │
-│  │  - Maintient le nombre de réplicas           │ │
-│  │  - Recrée les Pods si nécessaire             │ │
-│  │                                              │ │
-│  │  ┌─────────┐ ┌─────────┐ ┌─────────┐       │ │
-│  │  │  POD 1  │ │  POD 2  │ │  POD 3  │       │ │
-│  │  │ nginx   │ │ nginx   │ │ nginx   │       │ │
-│  │  └─────────┘ └─────────┘ └─────────┘       │ │
+│  │              REPLICASET                     │ │
+│  │  - Maintient le nombre de réplicas          │ │
+│  │  - Recrée les Pods si nécessaire            │ │
+│  │                                             │ │
+│  │  ┌─────────┐ ┌─────────┐ ┌─────────┐        │ │
+│  │  │  POD 1  │ │  POD 2  │ │  POD 3  │        │ │
+│  │  │ nginx   │ │ nginx   │ │ nginx   │        │ │
+│  │  └─────────┘ └─────────┘ └─────────┘        │ │
 │  └─────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────┘
+└──────────────────────────────────────────────────┘
 ```
 
 ---

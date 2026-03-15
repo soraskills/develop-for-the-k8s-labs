@@ -25,15 +25,15 @@ Le Horizontal Pod Autoscaler (HPA) est un contrôleur Kubernetes qui ajuste auto
 │  minReplicas: 1    maxReplicas: 10                       │
 │                                                          │
 │  ┌──────────────┐    métriques    ┌──────────────────┐   │
-│  │ metrics-     │ ◄───────────── │   Pods du        │   │
-│  │ server       │                │   Deployment     │   │
-│  └──────┬───────┘                └──────────────────┘   │
+│  │ metrics-     │ ◄─────────────  │   Pods du        │   │
+│  │ server       │                 │   Deployment     │   │
+│  └──────┬───────┘                 └──────────────────┘   │
 │         │                                  ▲             │
 │         ▼                                  │             │
-│  ┌──────────────┐    scale         ┌───────┴──────┐     │
-│  │     HPA      │ ──────────────► │  Deployment  │     │
-│  │  controller  │                  └──────────────┘     │
-│  └──────────────┘                                       │
+│  ┌──────────────┐    scale         ┌───────┴──────┐      │
+│  │     HPA      │ ──────────────►  │  Deployment  │      │
+│  │  controller  │                  └──────────────┘      │
+│  └──────────────┘                                        │
 └──────────────────────────────────────────────────────────┘
 ```
 

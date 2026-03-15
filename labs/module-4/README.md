@@ -19,16 +19,16 @@ Un Service est une abstraction qui définit un point d'accès stable vers un ens
 
 ```
 ┌──────────────────────────────────────────────┐
-│                  SERVICE                      │
-│  name: my-service                             │
-│  selector: app=my-app                         │
+│                  SERVICE                     │
+│  name: my-service                            │
+│  selector: app=my-app                        │
 │  ClusterIP: 10.43.x.x                        │
-│                                               │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐      │
-│  │  POD 1  │  │  POD 2  │  │  POD 3  │      │
-│  │ app:    │  │ app:    │  │ app:    │      │
-│  │ my-app  │  │ my-app  │  │ my-app  │      │
-│  └─────────┘  └─────────┘  └─────────┘      │
+│                                              │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐       │
+│  │  POD 1  │  │  POD 2  │  │  POD 3  │       │
+│  │ app:    │  │ app:    │  │ app:    │       │
+│  │ my-app  │  │ my-app  │  │ my-app  │       │
+│  └─────────┘  └─────────┘  └─────────┘       │
 └──────────────────────────────────────────────┘
 ```
 
